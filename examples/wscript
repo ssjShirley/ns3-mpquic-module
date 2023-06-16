@@ -1,12 +1,22 @@
 # -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
 
 def build(bld):
-    # obj = bld.create_ns3_program('quic-tester-streams', ['quic'])
-    # obj.source = 'quic-tester-streams.cc'
-    # obj = bld.create_ns3_program('quic-tester', ['quic'])
-    # obj.source = 'quic-tester.cc'
-    # obj = bld.create_ns3_program('quic-variants-comparison', ['quic'])
-    # obj.source = 'quic-variants-comparison.cc'
+    obj = bld.create_ns3_program('quic-tester-streams', ['quic'])
+    obj.source = 'quic-tester-streams.cc'
+    obj = bld.create_ns3_program('quic-tester', ['quic'])
+    obj.source = 'quic-tester.cc'
+    obj = bld.create_ns3_program('quic-variants-comparison', ['quic'])
+    obj.source = 'quic-variants-comparison.cc'
     obj = bld.create_ns3_program('quic-variants-comparison-bulksend', ['quic'])
     obj.source = 'quic-variants-comparison-bulksend.cc'
+    obj = bld.create_ns3_program('wns3-mpquic-one-path', ['quic'])
+    obj.source = 'wns3-mpquic-one-path.cc'
+    obj = bld.create_ns3_program('wns3-mpquic-two-path', ['quic'])
+    obj.source = 'wns3-mpquic-two-path.cc'
+    obj = bld.create_ns3_program('wns3-mpquic-four-path', ['quic'])
+    obj.source = 'wns3-mpquic-four-path.cc'
+    obj = bld.create_ns3_program('wns3-mpquic-two-path-cwnd', ['quic'])
+    obj.source = 'wns3-mpquic-two-path-cwnd.cc'
+    obj = bld.create_ns3_program('wns3-mpquic-two-path-flip', ['quic'])
+    obj.source = 'wns3-mpquic-two-path-flip.cc'
 
