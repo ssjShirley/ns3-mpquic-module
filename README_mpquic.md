@@ -39,3 +39,6 @@ Configure the mpquic module
 ```
 
 Run examples
+```
+./waf --run wns3-mpquic-two-path
+```
