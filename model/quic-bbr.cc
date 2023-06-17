@@ -616,8 +616,8 @@ QuicBbr::CongControl (Ptr<TcpSocketState> tcb,
                       const TcpRateOps::TcpRateSample &rs)
 {
     NS_LOG_FUNCTION (this << tcb);
-    NS_UNUSED (rc);
-    NS_UNUSED (rs);
+    [[maybe_unused]] (rc);
+    [[maybe_unused]] (rs);
 }
 
 void
@@ -705,8 +705,8 @@ QuicBbr::GetSsThresh (Ptr<const TcpSocketState> tcb, uint32_t bytesInFlight)
 void
 QuicBbr::IncreaseWindow (Ptr<TcpSocketState> tcb, uint32_t segmentsAcked)
 {
-  NS_UNUSED (tcb);
-  NS_UNUSED (segmentsAcked);
+  [[maybe_unused]] (tcb);
+  [[maybe_unused]] (segmentsAcked);
 }
 
 void

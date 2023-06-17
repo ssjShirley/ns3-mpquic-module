@@ -102,7 +102,7 @@ MpQuicCongestionOps::OnAckReceived (Ptr<TcpSocketState> tcb,
                                   const struct RateSample *rs, double alpha, double sum_rate)
 {
   NS_LOG_FUNCTION (this);
-  NS_UNUSED (rs);
+  [[maybe_unused]] (rs);
 
   Ptr<QuicSocketState> tcbd = dynamic_cast<QuicSocketState*> (&(*tcb));
   NS_ASSERT_MSG (tcbd != 0, "tcb is not a QuicSocketState");
