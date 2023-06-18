@@ -785,8 +785,8 @@ QuicL4Protocol::Receive (Ptr<Packet> packet,
                          Ipv6Header const &incomingIpHeader,
                          Ptr<Ipv6Interface> interface)
 {
-  NS_LOG_FUNCTION (this << packet << incomingIpHeader.GetSourceAddress () <<
-                   incomingIpHeader.GetDestinationAddress ());
+  NS_LOG_FUNCTION (this << packet << incomingIpHeader.GetSource () <<
+                   incomingIpHeader.GetDestination ());
   NS_FATAL_ERROR ("This call should not be used: QUIC packets need to go through a UDP socket");
   return IpL4Protocol::RX_OK;
 }
